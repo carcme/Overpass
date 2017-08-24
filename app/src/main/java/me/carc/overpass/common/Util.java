@@ -1,17 +1,21 @@
 package me.carc.overpass.common;
 
-import android.support.v7.appcompat.*;
+import org.osmdroid.util.BoundingBox;
+import org.osmdroid.util.GeoPoint;
 
 /**
+ * Common utils for map
  * Created by bamptonm on 21/08/2017.
  */
 
 public class Util {
 
+    private static final double LIMIT = 0.00012;
+
     /**
      * Build a TAG for debugging
      *
-     * @return
+     * @return the debug tag
      */
     public static String getTag() {
         String tag = "";
@@ -26,4 +30,11 @@ public class Util {
         return tag;
     }
 
+    public static BoundingBox getBoundsFromPoint(GeoPoint p) {
+        return new BoundingBox(
+                p.getLatitude() + LIMIT,
+                p.getLongitude() + LIMIT,
+                p.getLatitude() - LIMIT,
+                p.getLongitude() - LIMIT);
+    }
 }

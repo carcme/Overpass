@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Overpass</string>
+    <string name="req_time">Request Time</string>
+    <string name="not_found">Found Nothing</string>
 </resources>

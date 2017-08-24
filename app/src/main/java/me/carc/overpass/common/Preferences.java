@@ -7,12 +7,12 @@ import android.preference.PreferenceManager;
 import org.osmdroid.api.IGeoPoint;
 
 /**
+ * Pref manager for the sample
  * Created by bamptonm on 21/08/2017.
  */
 
 public class Preferences {
 
-    private final static String PREFS = "carc.me.Prefs";
     private final static String PREF_ZOOM = "pref_key_zoom";
     private final static String PREF_LAT = "pref_key_latitude";
     private final static String PREF_LNG = "pref_key_longtitude";
